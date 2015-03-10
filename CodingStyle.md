@@ -28,7 +28,7 @@
   
   
   
-## 點表示法 {#dot-notation-syntax}
+## 點表示法 ## {#dot-notation-syntax}
 應該*僅用於*獲取和改變屬性，中括號表示法用於所有其他實例。  
 正確用法：  
 
