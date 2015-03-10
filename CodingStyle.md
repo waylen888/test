@@ -1,7 +1,9 @@
 # Objective-C 編碼風格手冊
 
 ## 目錄
-* [Dot-Notation Syntax](#dot-notation-syntax)
+* [點表示法](#dot-notation-syntax)
+* [標題二][]
+* [標題三]()
   
   
   
@@ -26,9 +28,7 @@
   
   
   
-  
-  
-## Dot-Notation Syntax
+## 點表示法
 應該*僅用於*獲取和改變屬性，中括號表示法用於所有其他實例。  
 正確用法：  
 
@@ -42,10 +42,33 @@
 
 This is [an example][tag2] reference-style link.
 
+## 標題二
+應該*僅用於*獲取和改變屬性，中括號表示法用於所有其他實例。  
+正確用法：  
 
+        view.backgroundColor = [UIColor orangeColor];
+        [UIApplication sharedApplication].delegate;
 
+錯誤用法：  
 
+        [view setBackgroundColor:[UIColor orangeColor]]; 
+        UIApplication.sharedApplication.delegate;
 
+This is [an example][tag2] reference-style link.
+
+## 標題三
+應該*僅用於*獲取和改變屬性，中括號表示法用於所有其他實例。  
+正確用法：  
+
+        view.backgroundColor = [UIColor orangeColor];
+        [UIApplication sharedApplication].delegate;
+
+錯誤用法：  
+
+        [view setBackgroundColor:[UIColor orangeColor]]; 
+        UIApplication.sharedApplication.delegate;
+
+This is [an example][tag2] reference-style link.
 
 
 
