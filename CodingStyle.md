@@ -1,7 +1,7 @@
 # Objective-C 編碼風格手冊
 
 ## 目錄
-* [點表示法](#點表示法)
+* [Dot-Notation Syntax](#dot-notation-syntax)
   
   
   
@@ -28,7 +28,7 @@
   
   
   
-## 點表示法
+## Dot-Notation Syntax
 應該*僅用於*獲取和改變屬性，中括號表示法用於所有其他實例。  
 正確用法：  
 
