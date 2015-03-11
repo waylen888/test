@@ -180,7 +180,8 @@ result = a > b ? x = c > d ? c : d : y;
 
 變量修飾符(`__strong`、`__weak`、`__unsage_unretained`、`__autoreleasing`) 應該放置在指針星號和變量名稱之間，如 `NSString * __weak text`。
 
-## 命名
+命名
+====
 
 * 命名規則應盡可能符合Apple的[memory management rules](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html)([NARC](http://stackoverflow.com/a/2865194/340508))。在Objective-C中鼓勵使用長的描述性的方法和變量名稱。
 
@@ -215,6 +216,7 @@ static const NSTimeInterval kTopViewFadeAnimationDuration = 2.0
 屬性名稱應使用camel-case（駝峰式）命名方法，第一個字母應為小寫。
 
 > 但對於眾所皆知的名稱縮寫及特定名稱縮寫，無論在變量名稱的任何位置應該永遠保持大寫。
+>
 > **正確用法**
 >
 > ```objc
@@ -245,7 +247,7 @@ static const NSTimeInterval kTopViewFadeAnimationDuration = 2.0
 id varnm;
 ```
 
-## 註釋
+##註釋
 
 在需要註釋的地方，應使用註釋來解釋某一塊特定的代碼的功能。所有的代碼註釋必須是最新的，非必要的註釋就刪掉，盡量使用行註釋，而避免使用塊註釋。
 
