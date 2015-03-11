@@ -2,44 +2,25 @@
 
 ## 目錄
 
-* [點表示法](#點表示法)
-* [空格](#空格)
+* [基本排版](#基本排版)
 * [條件語句](#條件語句)
-* [三元運算子](#三元運算子)
-* [方法](#方法)
+* [運算式](#運算式)
 * [變量](#變量)
+  * [變量修飾符號](#變量修飾符號)
+* [點表示法](#點表示法)
 * [命名](#命名)
-* [下劃線](#下劃線)
 * [註釋](#註釋)
-* [初始化&內存釋放](#初始化&內存釋放)
 * [Literals字面量](#Literals字面量)
 * [CGRect函數](#CGRect函數)
 * [常量](#常量)
 * [枚舉類型](#枚舉類型)
+  * [位元遮罩](#位元遮罩)
 * [私有屬性](#私有屬性)
-* [圖片名稱](#圖片名稱)
-* [布爾變量](#布爾變量)
+* [BOOL變量](#BOOL變量)
 * [單例](#單例)
-* [Xcode項目](#Xcode項目)
+* [Xcode項目相關](#Xcode項目相關)
 
-## 點表示法
-
-應該**僅用於**獲取和改變屬性，中括號表示法用於所有其他實例。
-
-**正確用法**
-
-```objc
-view.backgroundColor = [UIColor orangeColor];
-[UIApplication sharedApplication].delegate;
-```
-**錯誤用法**
-
-```
-[view setBackgroundColor:[UIColor orangeColor]]; 
-UIApplication.sharedApplication.delegate;
-```
-
-## 空行排版
+## 基本排版
 
 * 函式大括號和其它大括號（比如`if`/`else`/`switch`/`while`等等）在語句的同一行開始，而在新的一行結束。
 
@@ -90,6 +71,7 @@ else {
 常見的錯誤包括在不使用大括號的情況下添加第二行語句，以為它屬於`if`語句的一部分。此外，更可怕的事情是，如果條件語句中的代碼行被註釋，則原本第二行語句將變成條件語句的一部分。所以這種編碼風格必須和其它條件語句均保持一致。
 
 **正確用法**
+
 ```objc
 if (!error) {
     return success;
@@ -97,6 +79,7 @@ if (!error) {
 ```
 
 **錯誤用法**
+
 ```objc
 if (!error)
     return success;
@@ -180,8 +163,24 @@ result = a > b ? x = c > d ? c : d : y;
 
 變量修飾符(`__strong`、`__weak`、`__unsage_unretained`、`__autoreleasing`) 應該放置在指針星號和變量名稱之間，如 `NSString * __weak text`。
 
-命名
-====
+## 點表示法
+
+應該**僅用於**獲取和改變屬性，中括號表示法用於所有其他實例。
+
+**正確用法**
+
+```objc
+view.backgroundColor = [UIColor orangeColor];
+[UIApplication sharedApplication].delegate;
+```
+**錯誤用法**
+
+```
+[view setBackgroundColor:[UIColor orangeColor]]; 
+UIApplication.sharedApplication.delegate;
+```
+
+## 命名
 
 * 命名規則應盡可能符合Apple的[memory management rules](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html)([NARC](http://stackoverflow.com/a/2865194/340508))。在Objective-C中鼓勵使用長的描述性的方法和變量名稱。
 
@@ -247,7 +246,7 @@ static const NSTimeInterval kTopViewFadeAnimationDuration = 2.0
 id varnm;
 ```
 
-##註釋
+## 註釋
 
 在需要註釋的地方，應使用註釋來解釋某一塊特定的代碼的功能。所有的代碼註釋必須是最新的，非必要的註釋就刪掉，盡量使用行註釋，而避免使用塊註釋。
 
@@ -366,7 +365,7 @@ typedef NS_OPTIONS(NSUInteger, NYTAdCategory) {
 ```
 
 
-## 布爾變量
+## BOOL變量
 
 因為`nil`將被解析為`NO`，因此沒有必要在條件語句中進行比較。永遠不要將任何東西和`YES`進行直接比較，因為`YES`被定義為1，而一個`BOOL`變量可以有8個bits。
 
