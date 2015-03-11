@@ -1,5 +1,5 @@
 # Objective-C 編碼風格手冊
-
+ 
 ## 目錄
 
 * [基本排版](#基本排版)
@@ -43,7 +43,7 @@ else {
 ```objc
 @implementation
 
-#pragma mark life-cycle
+#pragma mark life cycle
 - (void)dealloc {
     [super dealloc];
 }
